@@ -18,17 +18,18 @@ class AddNote extends React.Component {
     }
     render(){
         return (
-            <div>
+            <div id="addNote">
                 <form>
-                    <dl>
-                        <dt><span>Note Title</span></dt>
-                        <dd><input type="text" name="title" onChange={this.handleInputChange}/></dd>
-                    </dl>
-                    <dl>
-                        <dt><span>Note Content</span></dt>
-                        <dd><input type="text" name="content" onChange={this.handleInputChange}/></dd>
-                    </dl>
-                    <button onClick={this.addSticky}>Add Note</button>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Title</label>
+                        <input type="text" name="title" className="form-control" onChange={this.handleInputChange}/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputPassword1">Content</label>
+                        <textarea name="content" className="form-control" onChange={this.handleInputChange}>
+                        </textarea>
+                    </div>
+                    <button type="submit" onClick={this.addSticky} className="btn btn-primary">Add Note</button>
                 </form>
             </div>
         );
