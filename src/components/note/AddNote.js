@@ -12,9 +12,16 @@ class AddNote extends React.Component {
             [name]: value,
         });
     }
+    clearFields = (form) => {
+        let elements = form.elements;
+        for(let e = 0, elen = elements.length; e < elen; e++){
+            elements[e].value = "";
+        }
+    }
     addSticky = (e) => {
         e.preventDefault();
         this.props.addStickyNote(this.state);
+        this.clearFields(e.target);
     }
     render(){
         return (
