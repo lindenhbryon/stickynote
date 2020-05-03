@@ -6,16 +6,13 @@ class Note extends React.Component {
     }
     render(){
         const note = this.props.noteObject;
-        console.log("note", note);
         return(
-            <div>
-                <ul>
-                    {
-                        Object.keys(note).map(function(item, index){
-                            return <li key={index}>{item}</li>
-                        })
-                    }
-                </ul>
+            <div id="note">
+                <h4>{note.title}</h4>
+                <hr></hr>  
+                <p>{note.content}</p>
+                <hr></hr>
+                <button className="btn btn-danger" data-id={note.id} onClick={this.props.deleteStickyNote}>Delete</button>  
             </div>
         )
     }

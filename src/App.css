@@ -4,4 +4,23 @@ h2 {
 #addNote {
     width: 50%;
     margin: 30px auto;
+    
+}
+#note {
+    float:left;
+    background-color: #fff3cd;
+    border-radius: 3px;
+    margin: 2px;
+    word-wrap: break-word;
+    width: calc(33% - 2px);
+    padding: 10px;
+}
+#note>ul {
+    list-style:none;
+    padding: 0px;
+}
+.board-container {
+    margin:10px;
+    text-align:center;
+    min-height: 500px;
 }
