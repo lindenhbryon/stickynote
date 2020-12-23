@@ -1,3 +1,5 @@
+This project is a very simple sticky note board. I created this in order to fully understand how react works on it's own before starting bigger projects.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
